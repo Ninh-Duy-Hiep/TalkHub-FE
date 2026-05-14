@@ -1,12 +1,15 @@
-import './App.css'
+import { BrowserRouter } from 'react-router-dom';
+import { useAuthInit } from './features/auth/hooks/useAuthInit';
+import { AppRoutes } from './routes/AppRoutes';
 
 function App() {
+  useAuthInit();
+
   return (
-    <div className="app-container">
-      <h1>TalkHub</h1>
-      <p>Welcome to TalkHub Frontend</p>
-    </div>
-  )
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
