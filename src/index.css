@@ -17,6 +17,9 @@
 }
 
 @layer base {
+  html, body, #root {
+    @apply h-full;
+  }
   body {
     @apply bg-bg-main text-text-main;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
